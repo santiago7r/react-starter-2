@@ -7,9 +7,17 @@ const TaskList = () => {
   const {tasks, dispatch} = useContext(TasksContext)
   const {user} = useContext(AuthContext)
 
+  const dynamicUser = () => {
+    if(user) {
+      return `User: ${user}`;
+    } else {
+      return '';
+    }
+  }
+
   return (
     <>
-    <p>User: {user}</p>
+    <p>{dynamicUser()}</p>
       <button
         onClick={() => dispatch({ type: 'ADD', task: { id: Date.now(), title: 'Task ' + Date.now() }})}
         className="btn btn-primary my-3"

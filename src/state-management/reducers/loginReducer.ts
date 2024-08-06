@@ -1,5 +1,5 @@
 
-interface Action {
+export interface Action {
     type: 'LOGIN' | 'LOGOUT'
 }
 const loginReducer = (state: string, action: Action): string => {

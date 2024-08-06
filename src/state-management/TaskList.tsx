@@ -1,11 +1,11 @@
-import { useContext, useReducer, useState } from 'react';
-import taskListReducer from './reducers/taskListReducer';
-import TasksContext from './contexts/tasksContext';
+import { useContext } from 'react';
 import AuthContext from './contexts/authContext';
+import useTasklist from './hooks/useTasklist';
+import useAuth from './hooks/useAuth';
 
 const TaskList = () => {
-  const {tasks, dispatch} = useContext(TasksContext)
-  const {user} = useContext(AuthContext)
+  const {tasks, dispatch} = useTasklist();
+  const {user} = useAuth();
 
   const dynamicUser = () => {
     if(user) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Action } from "../reducers/loginReducer";
+import { Action } from "./AuthProvider";
 
 
 interface IAuthContext {

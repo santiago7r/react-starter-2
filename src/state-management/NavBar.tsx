@@ -1,7 +1,6 @@
-import { useContext } from 'react';
 import LoginStatus from './auth/LoginStatus';
-import TasksContext from './tasks/tasksContext';
 import useCounterStore from './counter/store';
+import { mountStoreDevtool } from 'simple-zustand-devtools';
 
 const NavBar = () => {
   const counter = useCounterStore(s => s.counter);

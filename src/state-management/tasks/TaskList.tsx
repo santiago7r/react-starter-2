@@ -2,12 +2,13 @@ import { useContext } from 'react';
 
 import TasksContext from './tasksContext';
 import useAuth from '../auth/useAuth';
+import useAuthStore from '../auth/store';
 
 const useTasklist = () => useContext(TasksContext);
 
 const TaskList = () => {
   const {tasks, dispatch} = useTasklist();
-  const {user} = useAuth();
+  const {user} = useAuthStore();
 
   const dynamicUser = () => {
     if(user) {

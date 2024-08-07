@@ -5,8 +5,6 @@ import { mountStoreDevtool } from 'simple-zustand-devtools';
 const NavBar = () => {
   const counter = useCounterStore(s => s.counter);
 
-  console.log('NAV RERENDER')
-
 
   return (
     <nav className="navbar d-flex justify-content-between">

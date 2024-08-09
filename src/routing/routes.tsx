@@ -1,14 +1,20 @@
 import { createBrowserRouter } from 'react-router-dom';
 import HomePage from './HomePage';
-import UserListPage from './UserListPage';
-import ContactPage from './ContactPage';
+import Layout from './Layout';
 import UserDetailPage from './UserDetailPage';
+import UserListPage from './UserListPage';
 
 
 const router = createBrowserRouter([
-    { path: '/', element: <HomePage /> },
-    { path: '/users', element: <UserListPage /> },
-    { path: '/users/:id', element: <UserDetailPage /> },
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            { path: '', element: <HomePage /> },
+            { path: 'users', element: <UserListPage /> },
+            { path: 'users/:id', element: <UserDetailPage /> },
+        ]
+    }
 
 ]);
 

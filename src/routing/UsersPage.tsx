@@ -1,4 +1,4 @@
-import UserListPage from "./UserListPage"
+import UserList from "./UserList"
 
 
 
@@ -6,7 +6,7 @@ const UsersPage = () => {
     return (
         <div className="row">
             <div className="col">
-                <UserListPage />
+                <UserList />
             </div>
             <div className="col"></div>
         </div>

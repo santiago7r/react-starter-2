@@ -6,7 +6,7 @@ const UserDetail = () => {
   const location = useLocation();
   console.log(searchParams.get('name'));
 
-  return <p>User</p>;
+  return <p>User {params.id}</p>;
 };
 
 export default UserDetail;

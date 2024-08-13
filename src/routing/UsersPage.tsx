@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"
 import UserList from "./UserList"
 
 
@@ -8,7 +9,12 @@ const UsersPage = () => {
             <div className="col">
                 <UserList />
             </div>
-            <div className="col"></div>
+            <div className="col">
+                <Outlet />
+            </div>
         </div>
     )
 }
+
+
+export default UsersPage;

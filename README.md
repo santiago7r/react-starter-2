@@ -26,3 +26,7 @@ This repository belongs to part 2 of my React course covering intermediate-level
 - Layout
 - NavBar
 - PrivateRoutes
+
+## Hooks in part 2
+
+- useAuth
